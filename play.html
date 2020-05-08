@@ -1,0 +1,162 @@
+<html>
+	<head>
+		<title>Testing Number</title>
+		<h2 align = "center"><u>Playing with Numbers!</u></h2>
+		<link rel="stylesheet" href="style2.css">
+	</head>
+	<style>
+body{
+	background-color:#edfbff;
+}
+a:hover{
+  opacity: 1;
+}
+	</style>
+	<body>
+		<table align = "center">
+			<tr>
+				<th><a style = "opacity: 1;" href = "http://www.dougshet.me/play.html">Increment Number</a></th>
+				<th><a href = "http://www.dougshet.me/random.html">Random Number Generator</a></th>
+			</tr>
+		</table>
+		<div class = "container1" align="center" style="margin:auto; margin-top:50; background-color:#edfbff; height:125px; width:500px;">
+			<b>Maximum Number</b><br><br>
+			<button onclick="maxNum('10')">10</button>
+			<button onclick="maxNum('25')">25</button>
+			<button onclick="maxNum(50)">50</button>
+			<button onclick="maxNum(100)">100</button>
+			<br/><br/>
+			<div id = "displayMax">
+			</div>
+		</div>
+		<div class = "container" align="center" style="margin:auto; margin-top:20; background-color:#edfbff; height:125px; width:500px;">
+			<b>Adding Number</b><br><br>
+			<button onclick="document.getElementById('displayNum').innerHTML = increment1()">+1</button>
+			<button onclick="document.getElementById('displayNum').innerHTML = increment2()">+2</button>
+			<button onclick="document.getElementById('displayNum').innerHTML = increment5()">+5</button>
+			<button onclick="document.getElementById('displayNum').innerHTML = increment10()">+10</button>
+			<button onclick="document.getElementById('displayNum').innerHTML = increment15()">+15</button>
+			<button onclick="document.getElementById('displayNum').innerHTML = increment20()">+20</button>
+			<br/><br/>
+			<div id ="displayNum">
+			</div>
+		</div>
+		<script>
+			var y = 30;
+			var x = {firstNum:0};
+			var delay = 200;
+			var message = "";
+			document.getElementById('displayMax').innerHTML = y;
+			document.getElementById('displayNum').innerHTML = x.firstNum;
+			
+			function maxNum(max)
+			{	
+					y = max;
+					document.getElementById('displayMax').innerHTML = y;
+			}
+			
+			function increment1()
+			{
+				if(x.firstNum >= y || x.firstNum+1 > y)
+				{
+					x.firstNum += 1;
+					setTimeout(function() {
+						x.firstNum = 0;
+					}, delay);
+					message = "<h3><br>Exceeding maximum value " + y + " <br>Resetting to 0...</h3>";
+				}
+				else
+				{
+					x.firstNum += 1;
+					message = "<h3><br>Incrementing!";
+				}
+				return x.firstNum + message;
+			}		
+			function increment2()
+			{
+				if(x.firstNum >= y || x.firstNum+2 > y)
+				{
+					x.firstNum += 2;
+					setTimeout(function() {
+						x.firstNum = 0;
+					}, delay);
+					message = "<h3><br>Exceeding maximum value " + y + " <br>Resetting to 0...</h3>";
+				}
+				else
+				{
+					x.firstNum += 2;
+					message = "<h3><br>Incrementing!</h3>";
+				}
+				return x.firstNum + message;
+			}		
+			function increment5()
+			{
+				if(x.firstNum >= y || x.firstNum+5 > y)
+				{
+					x.firstNum += 5;
+					setTimeout(function() {
+						x.firstNum = 0;
+					}, delay);
+					message = "<h3><br>Exceeding maximum value " + y + " <br>Resetting to 0...</h3>";
+				}
+				else
+				{
+					x.firstNum += 5;
+					message = "<h3><br>Incrementing!</h3>";
+				}
+				return x.firstNum + message;
+			}		
+			function increment10()
+			{
+				if(x.firstNum >= y || x.firstNum+10 > y)
+				{
+					x.firstNum += 10;
+					setTimeout(function() {
+						x.firstNum = 0;
+					}, delay);
+					message = "<h3><br>Exceeding maximum value " + y + " <br>Resetting to 0...</h3>";
+				}
+				else
+				{
+					x.firstNum += 10;
+					message = "<h3><br>Incrementing!</h3>";
+				}
+				return x.firstNum + message;
+			}		
+			function increment15()
+			{
+				if(x.firstNum >= y || x.firstNum+15 > y)
+				{
+					x.firstNum += 15;
+					setTimeout(function() {
+						x.firstNum = 0;
+					}, delay);
+					message = "<h3><br>Exceeding maximum value " + y + " <br>Resetting to 0...</h3>";
+				}
+				else
+				{
+					x.firstNum += 15;
+					message = "<h3><br>Incrementing!</h3>";
+				}
+				return x.firstNum + message;
+			}		
+			function increment20()
+			{
+				if(x.firstNum >= y || x.firstNum+20 > y)
+				{
+					x.firstNum += 20;
+					setTimeout(function() {
+						x.firstNum = 0;
+					}, delay);
+					message = "<h3><br>Exceeding maximum value " + y + " <br>Resetting to 0...</h3>";
+				}
+				else
+				{
+					x.firstNum += 20;
+					message = "<h3><br>Incrementing!</h3>";
+				}
+				return x.firstNum + message;
+			}		
+		</script>
+	</body>
+</html>
